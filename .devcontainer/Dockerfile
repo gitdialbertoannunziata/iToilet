@@ -53,5 +53,3 @@ RUN wget -q https://raw.githubusercontent.com/dapr/cli/master/install/install.sh
 # -----------------------------
 COPY dind-entrypoint.sh /usr/local/bin/dind-entrypoint.sh
 RUN chmod +x /usr/local/bin/dind-entrypoint.sh
-
-USER vscode
