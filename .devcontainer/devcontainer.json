@@ -1,15 +1,12 @@
 {
-  "name": "Dapr + .NET 8 + Node 8 DevContainer",
-  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
-  "runArgs": [
-    "--privileged"
-  ],
+  "name": "Dapr + .NET 8 + Node 18 DevContainer",
+  "image": "mcr.microsoft.com/devcontainers/base:noble",
   "features": {
     "ghcr.io/devcontainers/features/dotnet:2": {
       "version": "8.0"
     },
     "ghcr.io/devcontainers/features/node:1": {
-      "version": "8"
+      "version": "18"
     },
     "ghcr.io/dapr/cli/dapr-cli:0": {},
     "ghcr.io/devcontainers/features/docker-in-docker:2": {}
