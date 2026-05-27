@@ -1,20 +1,21 @@
 {
-  "name": "Dapr + .NET + Node DevContainer",
-  "build": {
-    "dockerfile": "Dockerfile"
-  },
+  "name": "Dapr + .NET 8 + Node 8 DevContainer",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
   "runArgs": [
     "--privileged"
   ],
-  "remoteUser": "vscode",
-  "features": {},
-  "mounts": [
-    "source=dind-var-lib-docker,target=/var/lib/docker,type=volume"
-  ],
-  "containerEnv": {
-    "DOCKER_HOST": "unix:///var/run/docker.sock"
+  "features": {
+    "ghcr.io/devcontainers/features/dotnet:2": {
+      "version": "8.0"
+    },
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "8"
+    },
+    "ghcr.io/dapr/cli/dapr-cli:0": {},
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
   },
-  "postCreateCommand": "bash /usr/local/bin/dind-entrypoint.sh",
+  "postCreateCommand": "dapr init",
+  "remoteUser": "vscode",
   "customizations": {
     "vscode": {
       "extensions": [
@@ -23,10 +24,8 @@
         "ms-vscode.vscode-node-azure-pack",
         "dbaeumer.vscode-eslint",
         "esbenp.prettier-vscode",
-      
-        
-                "GitHub.copilot",
-                "GitHub.copilot-chat"
+        "GitHub.copilot",
+        "GitHub.copilot-chat"
       ]
     }
   }
