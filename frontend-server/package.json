@@ -7,7 +7,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node main.js",
-    "start:dapr": "dapr run --app-id frontend --app-port 81 -- npm run start",
+    "start:dapr": "dapr run --app-id frontend --app-port 8080 -- npm run start",
     "buildandstart": "npm run buildclient && npm run start",
     "buildclient": "npm run --prefix ./client build"
   },

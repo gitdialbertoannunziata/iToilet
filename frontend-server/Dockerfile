@@ -1,6 +1,6 @@
 FROM node:19-alpine as base
 WORKDIR /app
-EXPOSE 81
+EXPOSE 8080
 
 FROM node:19-alpine as build
 RUN mkdir src
