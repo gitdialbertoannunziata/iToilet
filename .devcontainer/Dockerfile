@@ -47,11 +47,6 @@ RUN curl -fsSL https://deb.nodesource.com/setup_lts.x | bash - \
 # -----------------------------
 RUN wget -q https://raw.githubusercontent.com/dapr/cli/master/install/install.sh -O - | /bin/bash
 
-# -----------------------------
-# USER SETUP
-# -----------------------------
-RUN useradd -m vscode \
-    && echo "vscode ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
 
 # -----------------------------
 # DIND SCRIPT
