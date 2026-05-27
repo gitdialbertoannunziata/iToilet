@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "locator-api", "locator-api", "{98CBB7E6-BD22-4AAC-B888-72F190156AAE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocatorApi", "locator-api\LocatorApi\LocatorApi.csproj", "{62BB6A85-7603-45A1-AC8E-A0D8FDD33E7D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "review-api", "review-api", "{EE4513D7-F1B8-4414-B196-2C693B684111}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReviewApi", "review-api\ReviewApi\ReviewApi.csproj", "{38A06027-6967-49C9-B23C-5B7B73864772}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "notification", "notification", "{EE22C3B8-6AE0-45C7-90B4-F5D6E9CA8038}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotificationHandler", "notification\NotificationHandler\NotificationHandler.csproj", "{EF7764DD-61B0-458C-8C95-425BA77E7D09}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocatorApi.Tests", "LocatorApi.Tests\LocatorApi.Tests.csproj", "{A1ABDD5D-4762-4D80-96AB-4D9CA6055628}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{62BB6A85-7603-45A1-AC8E-A0D8FDD33E7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62BB6A85-7603-45A1-AC8E-A0D8FDD33E7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62BB6A85-7603-45A1-AC8E-A0D8FDD33E7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62BB6A85-7603-45A1-AC8E-A0D8FDD33E7D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38A06027-6967-49C9-B23C-5B7B73864772}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38A06027-6967-49C9-B23C-5B7B73864772}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38A06027-6967-49C9-B23C-5B7B73864772}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38A06027-6967-49C9-B23C-5B7B73864772}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF7764DD-61B0-458C-8C95-425BA77E7D09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF7764DD-61B0-458C-8C95-425BA77E7D09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF7764DD-61B0-458C-8C95-425BA77E7D09}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF7764DD-61B0-458C-8C95-425BA77E7D09}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1ABDD5D-4762-4D80-96AB-4D9CA6055628}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1ABDD5D-4762-4D80-96AB-4D9CA6055628}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1ABDD5D-4762-4D80-96AB-4D9CA6055628}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1ABDD5D-4762-4D80-96AB-4D9CA6055628}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{62BB6A85-7603-45A1-AC8E-A0D8FDD33E7D} = {98CBB7E6-BD22-4AAC-B888-72F190156AAE}
+		{38A06027-6967-49C9-B23C-5B7B73864772} = {EE4513D7-F1B8-4414-B196-2C693B684111}
+		{EF7764DD-61B0-458C-8C95-425BA77E7D09} = {EE22C3B8-6AE0-45C7-90B4-F5D6E9CA8038}
+	EndGlobalSection
+EndGlobal

@@ -16,7 +16,7 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "buildLocationApi",
-            "program": "${workspaceFolder}/locator-api/LocatorApi/bin/Debug/net6.0/LocatorApi.dll",
+            "program": "${workspaceFolder}/locator-api/LocatorApi/bin/Debug/net8.0/LocatorApi.dll",
             "args": [],
             "cwd": "${workspaceFolder}",
             "stopAtEntry": false,
@@ -37,7 +37,7 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "dapr-debug",
-            "program": "${workspaceFolder}/locator-api/LocatorApi/bin/Debug/net6.0/LocatorApi.dll",
+            "program": "${workspaceFolder}/locator-api/LocatorApi/bin/Debug/net8.0/LocatorApi.dll",
             "args": [
                 "--urls",
                 "http://localhost:7600"
@@ -62,7 +62,7 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "buildReviewApi",
-            "program": "${workspaceFolder}/review-api/ReviewApi/bin/Debug/net6.0/Review.dll",
+            "program": "${workspaceFolder}/review-api/ReviewApi/bin/Debug/net8.0/ReviewApi.dll",
             "args": [],
             "cwd": "${workspaceFolder}",
             "stopAtEntry": false,
@@ -83,7 +83,7 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "dapr-debug-review",
-            "program": "${workspaceFolder}/review-api/ReviewApi/bin/Debug/net6.0/ReviewApi.dll",
+            "program": "${workspaceFolder}/review-api/ReviewApi/bin/Debug/net8.0/ReviewApi.dll",
             "args": [
                 "--urls",
                 "http://localhost:7601",
@@ -108,7 +108,7 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "buildNotificationHandler",
-            "program": "${workspaceFolder}/notification/NotificationHandler/bin/Debug/net6.0/NotificationHandler.dll",
+            "program": "${workspaceFolder}/notification/NotificationHandler/bin/Debug/net8.0/NotificationHandler.dll",
             "args": [],
             "cwd": "${workspaceFolder}",
             "stopAtEntry": false,
@@ -129,7 +129,7 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "dapr-debug-notification",
-            "program": "${workspaceFolder}/notification/NotificationHandler/bin/Debug/net6.0/NotificationHandler.dll",
+            "program": "${workspaceFolder}/notification/NotificationHandler/bin/Debug/net8.0/NotificationHandler.dll",
             "args": [
                 "--urls",
                 "http://localhost:7602"
