@@ -22,7 +22,10 @@
         "ms-azuretools.vscode-dapr",
         "ms-vscode.vscode-node-azure-pack",
         "dbaeumer.vscode-eslint",
-        "esbenp.prettier-vscode"
+        "esbenp.prettier-vscode",
+        
+                "GitHub.copilot",
+                "GitHub.copilot-chat"
       ]
     }
   }

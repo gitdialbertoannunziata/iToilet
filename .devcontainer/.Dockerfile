@@ -1,6 +1,9 @@
+
 FROM mcr.microsoft.com/devcontainers/base:ubuntu
 
-# Install dependencies
+# -----------------------------
+# Base dependencies
+# -----------------------------
 RUN apt-get update && apt-get install -y \
     curl \
     wget \
@@ -10,43 +13,50 @@ RUN apt-get update && apt-get install -y \
     lsb-release \
     iptables \
     sudo \
+    software-properties-common \
     && rm -rf /var/lib/apt/lists/*
 
 # -----------------------------
-# Install Docker (DinD)
+# INSTALL DOCKER (DinD)
 # -----------------------------
 RUN curl -fsSL https://get.docker.com | sh
 
 # -----------------------------
-# Install .NET SDK
+# INSTALL .NET SDK (OFFICIAL WAY ✅)
 # -----------------------------
-RUN wget https://dot.net/v1/dotnet-install.sh \
-    && chmod +x dotnet-install.sh \
-    && ./dotnet-install.sh --channel LTS \
-    && rm dotnet-install.sh
+RUN wget https://packages.microsoft.com/config/ubuntu/$(lsb_release -rs)/packages-microsoft-prod.deb -O packages-microsoft-prod.deb \
+    && sudo dpkg -i packages-microsoft-prod.deb \
+    && rm packages-microsoft-prod.deb \
+    && apt-get update \
+    && apt-get install -y dotnet-sdk-8.0
 
-ENV PATH="$PATH:/root/.dotnet:/root/.dotnet/tools"
+# Optional: global tools
+RUN dotnet tool install -g dotnet-ef \
+    && dotnet tool install -g Microsoft.dotnet-httprepl
+
+ENV PATH="$PATH:/root/.dotnet/tools"
 
 # -----------------------------
-# Install Node.js (LTS)
+# INSTALL NODE (LTS)
 # -----------------------------
 RUN curl -fsSL https://deb.nodesource.com/setup_lts.x | bash - \
     && apt-get install -y nodejs
 
 # -----------------------------
-# Install Dapr CLI
+# INSTALL DAPR
 # -----------------------------
 RUN wget -q https://raw.githubusercontent.com/dapr/cli/master/install/install.sh -O - | /bin/bash
 
 # -----------------------------
-# Non-root user setup
+# USER SETUP
 # -----------------------------
 RUN useradd -m vscode \
     && echo "vscode ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
 
-# Copia script dind
+# -----------------------------
+# DIND SCRIPT
+# -----------------------------
 COPY dind-entrypoint.sh /usr/local/bin/dind-entrypoint.sh
 RUN chmod +x /usr/local/bin/dind-entrypoint.sh
 
 USER vscode
-``
