@@ -72,7 +72,6 @@ namespace LocatorApi.Controllers
                 Point = new Microsoft.Azure.Cosmos.Spatial.Point(toiletToAdd.Point.Longitude, toiletToAdd.Point.Latitude)
             };
 
-            await repository.AddAsync(toilet, _httpContextAccessor?.HttpContext?.RequestAborted ?? default);
             return NoContent();
         }
     }
